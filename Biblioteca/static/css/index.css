@@ -1,0 +1,124 @@
+/* Estilos gerais */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url(../images/Eua.png);
+    margin: 0;
+    padding: 0;
+    color: #000000;
+    
+}
+
+/* Estilos para o cabeçalho */
+header {
+    background-color: #eca4b4;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    height: 200px;
+}
+
+header img {
+    width: 58%;
+    height: 200px;
+    object-fit: cover; /* Mantém a imagem dentro da faixa sem distorção */
+}
+
+/* Estilos para o conteúdo principal */
+main {
+    background-color: #fff;
+    padding: 30px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+section h1, h2, h3, h4 {
+    text-align: center; /* Centraliza os títulos */
+}
+
+h1 {
+    font-family: 'Abril Fatface', serif;
+    color: #d40318;
+}
+
+h2 {
+    font-family: 'Abril Fatface', serif;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+h3 {
+    font-family: 'Abril Fatface', serif;
+    font-size: 2em;
+    margin-top: 30px;
+    color: #007bff;
+}
+
+h4 {
+    font-size: 1.5em;
+    margin-top: 40px;
+    color: #dc3545;
+}
+
+/* Estilos para parágrafos */
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: center; /* Centraliza os parágrafos */
+}
+
+/* Estilos para o botão de jogar */
+.btn-play {
+    background-color: #80aaf8;
+    color: #fff;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin: 20px auto; /* Centraliza o botão */
+}
+
+.btn-play:hover {
+    background-color: #eb7070;
+}
+
+/* Estilos para a imagem sobre a faixa */
+.rosa-faixa {
+    background-color: #eca4b4;
+    height: 200px;
+    width: 100%;
+    position: relative; /* Para permitir a imagem sobrepor a faixa */
+    text-align: center;
+
+}
+
+img.livro-logo2 {
+    width: 58%;
+    height: 200px;
+    object-fit: cover; /* Mantém a imagem dentro da faixa sem distorção */
+    margin-bottom: 30px;
+}
+
+/* Estilos para o rodapé */
+footer {
+    background-color: rgba(236, 164, 180, 0.8); /* Cor de fundo com transparência */
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+    margin-top: 20px;
+    width: 100%; /* Garante que o rodapé ocupe toda a largura da página */
+}
+
+footer .rights {
+    font-size: 1em;
+    color: #fff;
+    margin: 0;
+    padding: 10px 0;
+}
