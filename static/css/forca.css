@@ -85,21 +85,42 @@ p {
 }
 
 /* Estilos para o botão de jogar */
-.btn-play {
-    background-color: #80aaf8;
-    color: #fff;
-    font-size: 1.2em;
+.botoes {
+    display: flex;
+    justify-content: center; /* Centraliza os botões */
+    gap: 10px; /* Espaço entre os botões */
+}
+
+.btn {
+    background-color: #eca4b4; /* Azul */
+    color: #ffffff;
+    font-size: 1.1em;
     padding: 10px 20px;
     text-align: center;
     border-radius: 5px;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
     display: inline-block;
-    margin: 20px auto; /* Centraliza o botão */
+    border: none;
 }
 
-.btn-play:hover {
-    background-color: #eb7070;
+.btn:hover {
+    background-color: #d95c77; /* Azul mais escuro no hover */
+    transform: scale(1.05); /* Leve aumento no hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra no hover */
+}
+
+.btn:active {
+    transform: scale(0.98); /* Leve redução ao clicar */
+    background-color: #c41c40; /* Azul ainda mais escuro ao clicar */
+}
+
+.btn-tertiary {
+    background-color: #67b5f9; /* Cor cinza para o botão "Voltar" */
+}
+
+.btn-tertiary:hover {
+    background-color: #08558f; /* Cinza mais escuro no hover */
 }
 
 /* Estilos para a imagem sobre a faixa */
