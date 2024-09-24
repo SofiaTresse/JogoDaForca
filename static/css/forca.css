@@ -85,6 +85,7 @@ p {
 }
 
 /* Estilos para o botão de jogar */
+/* Estilos para os botões */
 .botoes {
     display: flex;
     justify-content: center; /* Centraliza os botões */
@@ -92,7 +93,7 @@ p {
 }
 
 .btn {
-    background-color: #eca4b4; /* Azul */
+    background-color: #eca4b4; /* Cor do botão */
     color: #ffffff;
     font-size: 1.1em;
     padding: 10px 20px;
@@ -102,25 +103,28 @@ p {
     transition: background-color 0.3s ease, transform 0.3s ease;
     display: inline-block;
     border: none;
+    width: 100%; /* Largura fixa para todos os botões */
+    line-height: 50px; /* Alinha verticalmente o texto dentro do botão */
+    box-sizing: border-box; /* Garante que padding/margem sejam incluídos no tamanho total */
 }
 
 .btn:hover {
-    background-color: #d95c77; /* Azul mais escuro no hover */
+    background-color: #d95c77; /* Cor do botão no hover */
     transform: scale(1.05); /* Leve aumento no hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra no hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra no hover */
 }
 
 .btn:active {
     transform: scale(0.98); /* Leve redução ao clicar */
-    background-color: #c41c40; /* Azul ainda mais escuro ao clicar */
+    background-color: #c41c40; /* Cor do botão ao clicar */
 }
 
 .btn-tertiary {
-    background-color: #67b5f9; /* Cor cinza para o botão "Voltar" */
+    background-color: #67b5f9; /* Cor do botão secundário */
 }
 
 .btn-tertiary:hover {
-    background-color: #08558f; /* Cinza mais escuro no hover */
+    background-color: #08558f; /* Cor no hover do botão secundário */
 }
 
 /* Estilos para a imagem sobre a faixa */

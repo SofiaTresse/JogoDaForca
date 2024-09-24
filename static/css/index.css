@@ -5,9 +5,7 @@ body {
     margin: 0;
     padding: 0;
     color: #000000;
-    
 }
-    
 
 /* Estilos para o cabeçalho */
 header {
@@ -19,13 +17,98 @@ header {
 }
 
 header img {
-    width: 58%; /* A largura da imagem */
+    width: 58%; /* Largura padrão da imagem */
     height: auto; /* Mantém a proporção */
     max-width: 100%; /* Garante que a imagem não exceda o tamanho do container */
-    display: block; /* Remove qualquer espaço extra ao redor da imagem */
+    display: block;
     margin: 0 auto; /* Centraliza horizontalmente */
 }
- 
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+    header {
+        height: 150px; /* Reduz a altura do cabeçalho em telas menores */
+    }
+
+    header img {
+        width: 80%; /* Aumenta a largura da imagem em dispositivos menores */
+    }
+
+    main {
+        padding: 20px;
+        margin-top: 10px;
+    }
+
+    h1 {
+        font-size: 1.8em; /* Reduz o tamanho da fonte do título em telas pequenas */
+    }
+
+    h2 {
+        font-size: 2em; /* Ajusta o tamanho dos subtítulos */
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    h4 {
+        font-size: 1.2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .rosa-faixa {
+        height: 150px;
+    }
+
+    img.livro-logo2 {
+        width: 70%; /* Ajusta o tamanho da imagem na faixa rosa */
+        height: 150px; /* Mantém a altura proporcional */
+    }
+}
+
+/* Ajustes para telas muito pequenas (smartphones pequenos) */
+@media (max-width: 480px) {
+    header {
+        height: 120px; /* Reduz mais a altura em telas muito pequenas */
+    }
+
+    header img {
+        width: 90%; /* Quase toda a largura do container em smartphones */
+    }
+
+    main {
+        padding: 15px;
+        margin-top: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    h3 {
+        font-size: 1.3em;
+    }
+
+    h4 {
+        font-size: 1.1em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    img.livro-logo2 {
+        width: 90%;
+        height: 120px;
+    }
+}
 
 /* Estilos para o conteúdo principal */
 main {
@@ -34,24 +117,19 @@ main {
     margin-top: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    text-align: center; /* Centraliza o conteúdo */
+    text-align: center;
 }
 
 section h1, h2, h3, h4 {
-    text-align: center; /* Centraliza os títulos */
+    text-align: center;
 }
 
 h1 {
     font-family: 'Abril Fatface', serif;
     background-image: linear-gradient(to bottom, rgb(255, 0, 0), rgb(248, 90, 90), rgb(4, 59, 223));
-  
-  
     background-clip: text;
-    -webkit-background-clip: text; 
-  
-   
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
     color: #d40318;
 }
 
@@ -76,26 +154,23 @@ h4 {
     color: #dc3545;
 }
 
-/* Estilos para parágrafos */
 p {
     font-size: 1.1em;
     line-height: 1.6;
     margin-bottom: 20px;
-    text-align: center; /* Centraliza os parágrafos */
+    text-align: center;
 }
 
 /* Estilos para o botão de jogar */
-
-      
 .botaogay {
     display: flex;
     flex-direction: column;
     gap: 20px;
     justify-content: center;
     align-items: center;
-  }
-  
-  a {
+}
+
+a {
     position: relative;
     width: 160px;
     height: 50px;
@@ -108,9 +183,9 @@ p {
     text-decoration: none;
     transition: 0.5s;
     border-radius: 5px;
-        }
-  
-  a span {
+}
+
+a span {
     position: absolute;
     display: block;
     top: 1px;
@@ -121,13 +196,13 @@ p {
     background: #f35f81;
     color: rgb(255, 255, 255);
     transition: 0.5s;
-  }
-  
-  a:hover span {
+}
+
+a:hover span {
     color: rgba(255, 255, 255, 1);
-  }
-  
-  a span::before {
+}
+
+a span::before {
     content: "";
     position: absolute;
     top: 0;
@@ -136,9 +211,9 @@ p {
     height: 50%;
     background: rgba(255, 255, 255, 0.1);
     z-index: 10;
-  }
-  
-  a::before {
+}
+
+a::before {
     content: "";
     position: absolute;
     top: 0;
@@ -147,14 +222,6 @@ p {
     height: 100%;
     background: linear-gradient(
       45deg,
-      #c0392b,
-      #f39c12,
-      #f1c40f,
-      #2ecc71,
-      #3498db,
-      #2980b9,
-      #9b59b6,
-      #8e44ad,
       #c0392b,
       #f39c12,
       #f1c40f,
@@ -168,14 +235,14 @@ p {
     opacity: 0;
     transition: 2.5s;
     animation: eff 20s linear infinite;
-  }
-  
-  a:hover::before,
-  a:hover::after {
+}
+
+a:hover::before,
+a:hover::after {
     opacity: 1;
-  }
-  
-  a::after {
+}
+
+a::after {
     content: "";
     position: absolute;
     top: 0;
@@ -184,14 +251,6 @@ p {
     height: 100%;
     background: linear-gradient(
       45deg,
-      #c0392b,
-      #f39c12,
-      #f1c40f,
-      #2ecc71,
-      #3498db,
-      #2980b9,
-      #9b59b6,
-      #8e44ad,
       #c0392b,
       #f39c12,
       #f1c40f,
@@ -206,44 +265,44 @@ p {
     filter: blur(20px);
     transition: 0.5s;
     animation: eff 20s ease infinite;
-  }
-  
-  @keyframes eff {
+}
+
+@keyframes eff {
     0% {
-      background-position: 0 0;
+        background-position: 0 0;
     }
     50% {
-      background-position: 400% 0;
+        background-position: 400% 0;
     }
     100% {
-      background-position: 0 0;
+        background-position: 0 0;
     }
-  }
+}
+
 /* Estilos para a imagem sobre a faixa */
 .rosa-faixa {
     background-color: #eca4b4;
     height: 200px;
     width: 100%;
-    position: relative; /* Para permitir a imagem sobrepor a faixa */
+    position: relative;
     text-align: center;
-
 }
 
 img.livro-logo2 {
     width: 58%;
     height: 200px;
-    object-fit: cover; /* Mantém a imagem dentro da faixa sem distorção */
+    object-fit: cover;
     margin-bottom: 30px;
 }
 
 /* Estilos para o rodapé */
 footer {
-    background-color: rgba(236, 164, 180, 0.8); /* Cor de fundo com transparência */
+    background-color: rgba(236, 164, 180, 0.8);
     padding: 10px 0;
     text-align: center;
     position: relative;
     margin-top: 20px;
-    width: 100%; /* Garante que o rodapé ocupe toda a largura da página */
+    width: 100%;
 }
 
 footer .rights {
