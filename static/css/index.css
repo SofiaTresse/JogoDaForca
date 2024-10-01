@@ -288,7 +288,7 @@ a::after {
 }
 
 /* Estilos para a imagem sobre a faixa */
-.rosafaixa {
+.faixa {
   background-color: #eca4b4;
   height: 200px;
   width: 100%;
@@ -302,6 +302,8 @@ img.livro-logo2 {
   object-fit: cover;
   margin-bottom: 30px;
 }
+
+
 
 /* Estilos para o rodapé */
 footer {
@@ -381,57 +383,58 @@ main.dark-mode {
   
 /* Botão tipo deslizar */
 .switch {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: inline-block;
+  width: 120px; /* Aumentando a largura do botão */
+  height: 60px;  /* Aumentando a altura do botão */
 }
 
 .switch input {
-    display: none;
+  display: none;
 }
 
 .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    transition: .4s;
-    border-radius: 34px;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px; /* Bordas ajustadas para o novo tamanho */
 }
 
 .slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    transition: .4s;
-    border-radius: 50%;
+  position: absolute;
+  content: "";
+  height: 52px;  /* Aumentando o tamanho da bolinha */
+  width: 52px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
 }
 
 input:checked + .slider {
-    background-color: #2196F3;
+  background-color: #fc68a5;
 }
 
 input:checked + .slider:before {
-    transform: translateX(26px);
+  transform: translateX(60px); /* Aumentando a distância para a bolinha */
 }
 
 .slider.round {
-    border-radius: 34px;
+  border-radius: 34px; /* Mantendo bordas arredondadas */
 }
+
 
 /* Conteúdo no modo escuro */
 header.dark-mode {
-    background-color: #333;
+    background-color: #37373f;
     
 }
 
@@ -448,10 +451,10 @@ body.dark-mode .livro-logo2 {
         content: url(../images/capa12.png);
 }
 
-.rosafaixa.dark-mode {
-    background-color: #676d7b;
-    height: 200px;
-    width: 100%;
-    position: relative;
-    text-align: center;
-  }
+.faixa.dark-mode {
+  background-color: #37373f;
+  height: 200px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
