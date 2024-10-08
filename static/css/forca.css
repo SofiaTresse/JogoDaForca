@@ -43,35 +43,10 @@ main {
     opacity: 0.95; /* Leve transparência */
 }
 
-section h1, h2, h3, h4 {
-    text-align: center; /* Centraliza os títulos */
-}
-
 .text-center {
     font-family: 'Abril Fatface', serif;
     color: #d40318;
     text-align: center;
-}
-
-h2 {
-    font-family: 'Abril Fatface', serif;
-    font-size: 2.5em;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #007bff;
-}
-
-h3 {
-    font-family: 'Abril Fatface', serif;
-    font-size: 2em;
-    margin-top: 30px;
-    color: #007bff;
-}
-
-h4 {
-    font-size: 1.5em;
-    margin-top: 40px;
-    color: #dc3545;
 }
 
 /* Estilos para parágrafos */
@@ -80,6 +55,7 @@ p {
     line-height: 1.6;
     margin-bottom: 20px;
     text-align: center; /* Centraliza os parágrafos */
+    color: #000000;
 }
 
 /* Estilos para os botões */
@@ -104,8 +80,8 @@ p {
     line-height: 50px; /* Alinha verticalmente o texto dentro do botão */
     box-sizing: border-box; /* Garante que padding/margem sejam incluídos no tamanho total */
     justify-content: center; /* Centraliza os botões */
-
 }
+
 @media (max-width: 768px) {
     .btn {
         width: auto; /* Permite que o botão tenha largura ajustável */
@@ -126,6 +102,7 @@ p {
         justify-content: center; /* Centraliza os botões */
     }
 }
+
 .btn:hover {
     background-color: #d95c77; /* Cor do botão no hover */
     transform: scale(1.05); /* Leve aumento no hover */
@@ -182,7 +159,6 @@ footer .rights {
 
 /* Dispositivos pequenos (celulares em modo retrato) */
 @media (max-width: 600px) {
-
     header img {
         width: 50%;
         height: 40px;
@@ -208,5 +184,182 @@ footer .rights {
     h4 {
         font-size: 1.2em;
     }
+}
 
+.switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: inline-block;
+    width: 100px; /* Largura padrão do botão */
+    height: 50px;  /* Altura padrão do botão */
+}
+  
+.switch input {
+    display: none;
+}
+  
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 30px; /* Bordas arredondadas */
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 44px;  /* Tamanho da bolinha */
+    width: 44px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+  
+input:checked + .slider {
+    background-color: #fc68a5;
+}
+  
+input:checked + .slider:before {
+    transform: translateX(48px); /* Distância para a bolinha ao deslizar */
+}
+  
+.slider.round {
+    border-radius: 30px; /* Mantendo bordas arredondadas */
+}
+  
+/* Ajustes para dispositivos menores (telas abaixo de 768px) */
+@media (max-width: 768px) {
+    .switch {
+        width: 50px;  /* Largura ligeiramente reduzida em telas médias */
+        height: 45px;  /* Altura reduzida */
+    }
+  
+    .slider:before {
+        height: 40px;  /* Bolinha menor para ajuste */
+        width: 40px;
+    }
+  
+    input:checked + .slider:before {
+        transform: translateX(42px); /* Distância ajustada para o tamanho reduzido */
+    }
+}
+  
+@media (max-width: 768px) {
+    .switch {
+        width: 60px; /* Largura reduzida em 2x */
+        height: 30px; /* Altura reduzida em 2x */
+    }
+  
+    .slider:before {
+        height: 26px; /* Bolinha menor em 2x */
+        width: 26px;
+    }
+  
+    input:checked + .slider:before {
+        transform: translateX(28px); /* Distância ajustada */
+    }
+  
+    .slider {
+        border-radius: 17px; /* Bordas ajustadas para o novo tamanho */
+    }
+}
+
+/* Estilos básicos do jogo */
+.switch {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    width: 34px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 34px;
+    position: relative;
+    transition: background-color 0.4s;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(14px);
+}
+
+/* Estilos para o modo escuro */
+.dark-mode.body {
+    background-image: url(../images/Eua1.png);
+    margin: 0;
+    padding: 0;
+    color: #f1f1f1;
+}
+
+.dark-mode .container{
+    background-color: #37373f;
+}
+
+.dark-mode .text-center {
+    font-family: 'Abril Fatface', serif;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Estilos para parágrafos no modo escuro */
+.dark-mode p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: center; /* Centraliza os parágrafos */
+    color: #fff; /* Definindo a cor como branca */
+}
+
+header.dark-mode img {
+    filter: brightness(0.7);
+}
+
+.dark-mode .btn {
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+}
+
+.dark-mode .form-control {
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+}
+
+.dark-mode input::placeholder {
+    color: #aaa;
+}
+
+footer.dark-mode {
+    background-color: #1c1c1c;
+    color: #fff;
 }
