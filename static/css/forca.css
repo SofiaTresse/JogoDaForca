@@ -5,7 +5,6 @@ body {
     margin: 0;
     padding: 0;
     color: #000000;
-    
 }
 
 /* Estilos para o cabeçalho */
@@ -14,7 +13,6 @@ header {
     padding: 0;
     text-align: center;
     position: relative;
-    height: 200px;
 }
 
 header img {
@@ -44,15 +42,15 @@ main {
     box-sizing: border-box;
     opacity: 0.95; /* Leve transparência */
 }
+
 section h1, h2, h3, h4 {
     text-align: center; /* Centraliza os títulos */
 }
 
-.text-center{
+.text-center {
     font-family: 'Abril Fatface', serif;
     color: #d40318;
     text-align: center;
-    
 }
 
 h2 {
@@ -84,7 +82,6 @@ p {
     text-align: center; /* Centraliza os parágrafos */
 }
 
-/* Estilos para o botão de jogar */
 /* Estilos para os botões */
 .botoes {
     display: flex;
@@ -106,8 +103,29 @@ p {
     width: 100%; /* Largura fixa para todos os botões */
     line-height: 50px; /* Alinha verticalmente o texto dentro do botão */
     box-sizing: border-box; /* Garante que padding/margem sejam incluídos no tamanho total */
+    justify-content: center; /* Centraliza os botões */
+
+}
+@media (max-width: 768px) {
+    .btn {
+        width: auto; /* Permite que o botão tenha largura ajustável */
+        padding: 10px; /* Ajusta o padding para um botão mais plano */
+        line-height: normal; /* Remove o alinhamento vertical */
+        font-size: 1em; /* Reduz o tamanho da fonte */
+        border-radius: 5px; /* Remove bordas arredondadas para um estilo flat */
+        justify-content: center; /* Centraliza os botões */
+    }
 }
 
+@media (max-width: 480px) {
+    .btn {
+        width: 100%; /* Garante que o botão ocupe toda a largura em smartphones */
+        padding: 10px 0; /* Ajusta o padding para um botão mais plano */
+        font-size: 0.9em; /* Ajusta o tamanho da fonte para telas pequenas */
+        border-radius: 5px; /* Remove bordas arredondadas para um estilo flat */
+        justify-content: center; /* Centraliza os botões */
+    }
+}
 .btn:hover {
     background-color: #d95c77; /* Cor do botão no hover */
     transform: scale(1.05); /* Leve aumento no hover */
@@ -134,7 +152,6 @@ p {
     width: 100%;
     position: relative; /* Para permitir a imagem sobrepor a faixa */
     text-align: center;
-
 }
 
 img.livro-logo2 {
@@ -159,4 +176,37 @@ footer .rights {
     color: #fff;
     margin: 0;
     padding: 10px 0;
+}
+
+/* Media Queries para responsividade */
+
+/* Dispositivos pequenos (celulares em modo retrato) */
+@media (max-width: 600px) {
+
+    header img {
+        width: 50%;
+        height: 40px;
+    }
+
+    main {
+        padding: 15px;
+        margin-top: 10px;
+    }
+
+    .container {
+        max-width: 90%;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    h4 {
+        font-size: 1.2em;
+    }
+
 }

@@ -13,7 +13,6 @@ header {
   padding: 0;
   text-align: center;
   position: relative;
-  height: 200px;
 }
 
 header img {
@@ -26,10 +25,6 @@ header img {
 
 /* Ajustes para dispositivos móveis */
 @media (max-width: 768px) {
-  header {
-    height: 150px; /* Reduz a altura do cabeçalho em telas menores */
-  }
-
   header img {
     width: 80%; /* Aumenta a largura da imagem em dispositivos menores */
   }
@@ -71,10 +66,6 @@ header img {
 
 /* Ajustes para telas muito pequenas (smartphones pequenos) */
 @media (max-width: 480px) {
-  header {
-    height: 120px; /* Reduz mais a altura em telas muito pequenas */
-  }
-
   header img {
     width: 90%; /* Quase toda a largura do container em smartphones */
   }
@@ -107,6 +98,15 @@ header img {
   img.livro-logo2 {
     width: 90%;
     height: 120px;
+
+
+  }
+}
+
+
+@media (max-width: 600px) {
+  .container {
+      max-width: 90%;
   }
 }
 
@@ -301,6 +301,113 @@ img.livro-logo2 {
   height: 200px;
   object-fit: cover;
   margin-bottom: 30px;
+}
+
+
+/* Ajustes para o botão de alternância (switch) */
+.switch {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: inline-block;
+  width: 100px; /* Largura padrão do botão */
+  height: 50px;  /* Altura padrão do botão */
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 30px; /* Bordas arredondadas */
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 44px;  /* Tamanho da bolinha */
+  width: 44px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #fc68a5;
+}
+
+input:checked + .slider:before {
+  transform: translateX(48px); /* Distância para a bolinha ao deslizar */
+}
+
+.slider.round {
+  border-radius: 30px; /* Mantendo bordas arredondadas */
+}
+
+/* Ajustes para dispositivos menores (telas abaixo de 768px) */
+@media (max-width: 768px) {
+  .switch {
+    width: 50px;  /* Largura ligeiramente reduzida em telas médias */
+    height: 45px;  /* Altura reduzida */
+  }
+
+  .slider:before {
+    height: 40px;  /* Bolinha menor para ajuste */
+    width: 40px;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(42px); /* Distância ajustada para o tamanho reduzido */
+  }
+}
+
+@media (max-width: 768px) {
+  .switch {
+    width: 60px; /* Largura reduzida em 2x */
+    height: 30px; /* Altura reduzida em 2x */
+  }
+
+  .slider:before {
+    height: 26px; /* Bolinha menor em 2x */
+    width: 26px;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(28px); /* Distância ajustada */
+  }
+
+  .slider {
+    border-radius: 17px; /* Bordas ajustadas para o novo tamanho */
+  }
+}
+/* Ajustes para o vídeo */
+video {
+  max-width: 100%; /* Garante que o vídeo não ultrapasse a largura do container */
+  height: auto; /* Mantém a proporção do vídeo */
+}
+
+@media (max-width: 768px) {
+  video {
+    width: 90%; /* Aumenta a largura do vídeo em dispositivos menores */
+    height: auto; /* Mantém a proporção */
+  }
+}
+
+@media (max-width: 480px) {
+  video {
+    width: 100%; /* Ocupa toda a largura em smartphones pequenos */
+    height: auto; /* Mantém a proporção */
+  }
 }
 
 

@@ -5,39 +5,8 @@ const tentativasMaximas = 6;
 let tentativasRestantes;
 
 function iniciarJogo() {
-    const palavras = [
-        "Alex", "Henry", "Claremont-diaz", "Turbolixo", "Rafael Luna",
-        "Nora", "June", "Turma do Eixo", "Rainha Mary", "Wimbledon",
-        "Texas", "David", "Karaokê", "Casamento Real", "Beijo no Jardim",
-        "Festa de Ano Novo", "Email", "Revelação Pública", "Casa de Férias",
-        "Vazamento de Emails", "Final Feliz",
-    ]; 
-    const dicas = [
-        "Filho da presidente dos Estados Unidos e protagonista da história.",
-        "Príncipe britânico e interesse amoroso de Alex.",
-        "Sobrenome da família de Alex.",
-        "Escândalo que ocorre após um incidente no casamento real e inicia a relação de Alex e Henry",
-        "Senador dos EUA e amigo de Alex, que tem um papel importante na história.",
-        "Melhor amiga de Alex e neta do vice-presidente.",
-        "Irmã de Alex",
-        "Grupo que inclui Alex, Nora e June.",
-        "A avó de Henry, que tem uma posição importante na monarquia britânica.",
-        "Torneio de tênis onde Alex e Henry compartilham um momento importante.",
-        "Estado natal de Alex, onde ele tem fortes raízes.",
-        "Irmão mais velho de Henry, que é o próximo na linha de sucessão ao trono.",
-        "Local onde ocorre a famosa cena da música Dont Stop Me Now",
-        "Evento no qual Alex e Henry se envolvem em uma briga que vira notícia.",
-        "Primeiro momento em que Alex e Henry se beijam",
-        "Ocasião onde Alex e Henry compartilham um momento especial e se beijam novamente.",
-        "Meio através do qual Alex e Henry trocam confissões emocionais, que mais tarde são vazados.",
-        "Cena em que o relacionamento de Alex e Henry é exposto ao público, causando um grande escândalo.",
-        "Local onde Alex e Henry passam um tempo isolados, longe dos holofotes.",
-        "Escândalo que expõe o relacionamento íntimo entre Alex e Henry ao público.",
-        "Cena de conclusão em que Alex e Henry finalmente assumem seu relacionamento e encontram aceitação pública.",
-    ]; 
-    
     const indiceAleatorio = Math.floor(Math.random() * palavras.length); 
-    palavraAtual = palavras[indiceAleatorio];
+    palavraAtual = palavras[indiceAleatorio].toLowerCase(); // Converte a palavra para minúsculas
     dicaAtual = dicas[indiceAleatorio];
     letrasAdivinhadas = [];
     tentativasRestantes = tentativasMaximas;
@@ -48,8 +17,13 @@ function atualizarDisplayDoJogo() {
     let palavraExibida = "";
     for (let i = 0; i < palavraAtual.length; i++) { 
         const letra = palavraAtual[i];
-        if (letrasAdivinhadas.indexOf(letra.toLowerCase()) !== -1 || letra === " ") {
-            palavraExibida += letra; // Exibe a letra correta ou espaço
+        if (letrasAdivinhadas.indexOf(letra) !== -1 || letra === " ") {
+            // Mostra a primeira letra em maiúscula, as demais em minúscula
+            if (i === 0 || palavraAtual[i - 1] === " ") {
+                palavraExibida += letra.toUpperCase(); 
+            } else {
+                palavraExibida += letra.toLowerCase(); 
+            }
         } else {
             palavraExibida += " _ "; // Usa underscore para letras não adivinhadas
         }
@@ -78,7 +52,7 @@ function adivinharLetra() {
 
             let palavraCompleta = true;
             for (let i = 0; i < palavraAtual.length; i++) {
-                if (letrasAdivinhadas.indexOf(palavraAtual[i].toLowerCase()) === -1 && palavraAtual[i] !== " ") {
+                if (letrasAdivinhadas.indexOf(palavraAtual[i]) === -1 && palavraAtual[i] !== " ") {
                     palavraCompleta = false;
                     break;
                 }
@@ -94,12 +68,11 @@ function adivinharLetra() {
     entradaAdivinhacao.value = "";
 
     const toggleDarkModeBtn = document.getElementById('toggle-dark-mode');
-toggleDarkModeBtn.addEventListener('click', function () {
-    document.body.classList.toggle('dark-mode');
-    const forca = document.getElementById('forca');
-    forca.classList.toggle('dark-mode');
-});
-
+    toggleDarkModeBtn.addEventListener('click', function () {
+        document.body.classList.toggle('dark-mode');
+        const forca = document.getElementById('forca');
+        forca.classList.toggle('dark-mode');
+    });
 }
 
 document.addEventListener("DOMContentLoaded", iniciarJogo);
