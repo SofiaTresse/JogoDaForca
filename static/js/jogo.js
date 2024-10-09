@@ -59,10 +59,13 @@ function adivinharLetra() {
             }
 
             if (palavraCompleta) {
-                document.getElementById("status").textContent = "Você venceu!";
+                document.getElementById("status").textContent = "O amor é amor, não importa a forma que ele tome. Ser LGBT é uma celebração da diversidade e da beleza da autenticidade. Orgulhe-se de quem você é e saiba que seu amor é verdadeiro e válido! 🌈❤️";
+                document.getElementById("ganhou").style.display = "block"; // Mostra a imagem de vitória
             } else if (tentativasRestantes <= 0) {
                 document.getElementById("status").textContent = `Você perdeu! A palavra era: ${palavraAtual}`;
+                document.getElementById("ganhou").style.display = "none"; // Oculta a imagem de vitória se o jogador perdeu
             }
+            
         }
     }
     entradaAdivinhacao.value = "";

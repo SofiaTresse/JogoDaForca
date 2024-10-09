@@ -538,6 +538,25 @@ input:checked + .slider:before {
   border-radius: 34px; /* Mantendo bordas arredondadas */
 }
 
+@media (max-width: 600px) {
+  .switch {
+      width: 80px; /* Reduz a largura do botão */
+      height: 40px; /* Reduz a altura do botão */
+      top: 10px; /* Ajuste da posição */
+      right: 10px; /* Ajuste da posição */
+  }
+
+  .slider:before {
+      height: 35px; /* Reduz a altura da bolinha */
+      width: 35px; /* Reduz a largura da bolinha */
+  }
+
+  input:checked + .slider:before {
+      transform: translateX(40px); /* Ajuste da translação para a bolinha no modo ativo */
+  }
+
+}
+
 
 /* Conteúdo no modo escuro */
 header.dark-mode {
@@ -548,6 +567,10 @@ header.dark-mode {
 footer.dark-mode {
     background-color: #444;
     color: #f1f1f1;
+}
+
+faixa.dark-mode .livro-logo2 {
+  content: url(../images/capa22.png);
 }
 
 
@@ -565,7 +588,7 @@ footer.dark-mode {
 }
 
 .faixa.dark-mode {
-  background-color: #37373f;
+  background-color: #37373f; /* Cor de fundo mais escura */
   height: 200px;
   width: 100%;
   position: relative;

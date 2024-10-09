@@ -4,12 +4,15 @@ function desenharBoneco(tentativasRestantes) {
     // Limpa o conteúdo existente
     forca.innerHTML = "";
 
-    // Defina suas cores aqui
-    const corPalo = "#333"; // Cor para o poste
-    const corCorpo = "#333"; // Cor para o corpo
-    const corCabeca = "#333"; // Cor para a cabeça
-    const corBracos = "#333"; // Cor para os braços
-    const corPernas = "#333"; // Cor para as pernas
+    // Verifica se o modo escuro está ativado
+    const darkModeAtivo = document.body.classList.contains("dark-mode");
+
+    // Defina as cores com base no modo escuro ou claro
+    const corPalo = darkModeAtivo ? "#ffffff" : "#333"; // Branco no modo escuro
+    const corCorpo = darkModeAtivo ? "#ffffff" : "#333"; // Branco no modo escuro
+    const corCabeca = darkModeAtivo ? "#ffffff" : "#333"; // Branco no modo escuro
+    const corBracos = darkModeAtivo ? "#ffffff" : "#333"; // Branco no modo escuro
+    const corPernas = darkModeAtivo ? "#ffffff" : "#333"; // Branco no modo escuro
 
     // Criação do poste
     const palo = document.createElement("div");

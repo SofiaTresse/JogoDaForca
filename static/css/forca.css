@@ -191,15 +191,15 @@ footer .rights {
     top: 20px;
     right: 20px;
     display: inline-block;
-    width: 100px; /* Largura padrão do botão */
-    height: 50px;  /* Altura padrão do botão */
-}
+    width: 120px; /* Aumentando a largura do botão */
+    height: 60px;  /* Aumentando a altura do botão */
+  }
   
-.switch input {
+  .switch input {
     display: none;
-}
+  }
   
-.slider {
+  .slider {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -207,117 +207,76 @@ footer .rights {
     right: 0;
     bottom: 0;
     background-color: #ccc;
-    transition: 0.4s;
-    border-radius: 30px; /* Bordas arredondadas */
-}
+    transition: .4s;
+    border-radius: 34px; /* Bordas ajustadas para o novo tamanho */
+  }
   
-.slider:before {
+  .slider:before {
     position: absolute;
     content: "";
-    height: 44px;  /* Tamanho da bolinha */
-    width: 44px;
-    left: 3px;
-    bottom: 3px;
+    height: 52px;  /* Aumentando o tamanho da bolinha */
+    width: 52px;
+    left: 4px;
+    bottom: 4px;
     background-color: white;
-    transition: 0.4s;
+    transition: .4s;
     border-radius: 50%;
-}
+  }
   
-input:checked + .slider {
+  input:checked + .slider {
     background-color: #fc68a5;
-}
+  }
   
-input:checked + .slider:before {
-    transform: translateX(48px); /* Distância para a bolinha ao deslizar */
-}
+  input:checked + .slider:before {
+    transform: translateX(60px); /* Aumentando a distância para a bolinha */
+  }
   
-.slider.round {
-    border-radius: 30px; /* Mantendo bordas arredondadas */
-}
+  .slider.round {
+    border-radius: 34px; /* Mantendo bordas arredondadas */
+  }
   
-/* Ajustes para dispositivos menores (telas abaixo de 768px) */
-@media (max-width: 768px) {
+  @media (max-width: 600px) {
     .switch {
-        width: 50px;  /* Largura ligeiramente reduzida em telas médias */
-        height: 45px;  /* Altura reduzida */
+        width: 80px; /* Reduz a largura do botão */
+        height: 40px; /* Reduz a altura do botão */
+        top: 10px; /* Ajuste da posição */
+        right: 10px; /* Ajuste da posição */
     }
-  
+
     .slider:before {
-        height: 40px;  /* Bolinha menor para ajuste */
-        width: 40px;
+        height: 35px; /* Reduz a altura da bolinha */
+        width: 35px; /* Reduz a largura da bolinha */
     }
-  
+
     input:checked + .slider:before {
-        transform: translateX(42px); /* Distância ajustada para o tamanho reduzido */
-    }
-}
-  
-@media (max-width: 768px) {
-    .switch {
-        width: 60px; /* Largura reduzida em 2x */
-        height: 30px; /* Altura reduzida em 2x */
-    }
-  
-    .slider:before {
-        height: 26px; /* Bolinha menor em 2x */
-        width: 26px;
-    }
-  
-    input:checked + .slider:before {
-        transform: translateX(28px); /* Distância ajustada */
-    }
-  
-    .slider {
-        border-radius: 17px; /* Bordas ajustadas para o novo tamanho */
+        transform: translateX(40px); /* Ajuste da translação para a bolinha no modo ativo */
     }
 }
 
-/* Estilos básicos do jogo */
-.switch {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.switch input {
-    display: none;
-}
-
-.slider {
-    width: 34px;
-    height: 20px;
-    background-color: #ccc;
-    border-radius: 34px;
-    position: relative;
-    transition: background-color 0.4s;
-}
-
-.slider:before {
-    content: "";
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    left: 2px;
-    bottom: 2px;
-    background-color: white;
-    border-radius: 50%;
-    transition: transform 0.4s;
-}
-
-input:checked + .slider {
-    background-color: #2196F3;
-}
-
-input:checked + .slider:before {
-    transform: translateX(14px);
-}
 
 /* Estilos para o modo escuro */
-.dark-mode.body {
-    background-image: url(../images/Eua1.png);
+.dark-mode {
+    font-family: 'Arial', sans-serif;
+    background-image: url(../images/Eua2.png); /* Imagem para o modo escuro */
     margin: 0;
     padding: 0;
+    color: #ffffff;
+}
+
+.dark-mode header {
+    background-color: #37373f;
+    text-align: center;
+    position: relative;
+}
+
+.dark-mode footer {
+    background-color: #444;
     color: #f1f1f1;
+}
+
+
+body.dark-mode .livro-logo1 {
+    content: url(../images/capa32.png);
 }
 
 .dark-mode .container{
@@ -357,6 +316,15 @@ header.dark-mode img {
 
 .dark-mode input::placeholder {
     color: #aaa;
+}
+
+.display-4 {
+    color: black;
+}
+
+/* Modo escuro */
+.dark-mode .display-4 {
+    color: white;
 }
 
 footer.dark-mode {
