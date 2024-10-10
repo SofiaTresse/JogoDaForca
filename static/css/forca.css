@@ -58,6 +58,23 @@ p {
     color: #000000;
 }
 
+
+
+
+#vitoriaGif {
+    display: none; /* O GIF começa escondido */
+    position: fixed; /* Faz o GIF cobrir toda a tela */
+    top: 0; 
+    left: 0;
+    width: 100vw; /* Largura total da janela */
+    height: 100vh; /* Altura total da janela */
+    z-index: 999; /* Z-index alto para garantir que o GIF fique sobre todo o conteúdo */
+    object-fit: cover; /* Faz o GIF cobrir a tela mantendo a proporção */
+}
+
+
+
+
 /* Estilos para os botões */
 .botoes {
     display: flex;
