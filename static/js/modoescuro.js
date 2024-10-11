@@ -21,4 +21,9 @@ darkModeToggle.addEventListener('change', function () {
         imgLogo1.src = './static/images/capa1.jpeg'; // Imagem para o modo claro
         imgFaixa.src = './static/images/capa2.jpeg'; // Imagem dentro da faixa para o modo claro
     }
+
+    const span = document.querySelector('span'); // Ajuste o seletor conforme necessário
+if (span) {
+    span.remove(); // Remove o primeiro <span> encontrado
+}
 });
