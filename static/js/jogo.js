@@ -67,6 +67,8 @@ function adivinharLetra() {
                 document.getElementById("ganhou").style.display = "none"; // Oculta a imagem de vitória se o jogador perdeu
                 document.getElementById("vitoriaGif").style.display = "none"; // Oculta o GIF se o jogador perdeu
             }
+            
+            
         }
     }
     entradaAdivinhacao.value = "";
@@ -78,19 +80,5 @@ function adivinharLetra() {
         forca.classList.toggle('dark-mode');
     });
 }
-
-// Lógica de controle de música
-const audio = document.getElementById('myAudio');
-const playPauseBtn = document.getElementById('playPauseBtn');
-
-playPauseBtn.addEventListener('click', function () {
-    if (audio.paused) {
-        audio.play();
-        playPauseBtn.textContent = 'Pause';
-    } else {
-        audio.pause();
-        playPauseBtn.textContent = 'Play';
-    }
-});
 
 document.addEventListener("DOMContentLoaded", iniciarJogo);
